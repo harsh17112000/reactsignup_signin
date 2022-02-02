@@ -116,10 +116,11 @@ const Signup_Signin = () => {
         } else {
 
             if (getArr && getArr.length) {
-                const getdataArr = JSON.parse(getArr);
+                const getdataArr = JSON.parse(getArr); // value convert in js object
                 const done_login = getdataArr.filter((e, k) => {
-                    return e.email === userlog.email && e.password === userlog.password
+                    return e.email == userlog.email && e.password == userlog.password
                 });
+                // console.log(done_login);
 
                 if (done_login.length === 0) {
                     toast.error("invalid details!", {
