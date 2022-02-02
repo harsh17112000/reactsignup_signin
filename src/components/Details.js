@@ -27,6 +27,7 @@ const Details = () => {
     // console.log(getdata);
 
 
+
     // view time individual data
     const [viewdata, setViewData] = useState("");
 
@@ -98,9 +99,9 @@ const Details = () => {
     const viewClose = () => setVie(false);
     const viewOpen = (vi) => {
         setVie(true);
-       
+
         const viewindData = getdata.find((e, id) => e.email === vi);
-      
+
         setViewData(viewindData);
     }
 
@@ -192,7 +193,7 @@ const Details = () => {
                                                 return (
                                                     <>
                                                         <tr className='text-center' key={k}>
-                                                            <td>{e.id}</td>
+                                                            <td>{k+1}</td>  
                                                             <td>{e.username}</td>
                                                             <td>{e.email}</td>
                                                             <td>{e.phone}</td>
@@ -396,3 +397,18 @@ const Details = () => {
 }
 
 export default Details
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <td>{k+1}</td>   // aiya e.id thi new user add karie to id set nati thati atle key use kari 6 */}

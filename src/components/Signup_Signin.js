@@ -86,6 +86,7 @@ const Signup_Signin = () => {
             toast.success("Your Data Succesfully Added 😃!", {
                 position: "top-center"
             });
+            setSign("sign"); // bcz submit click pr jana chahiye signin page pr
         }
     };
 
